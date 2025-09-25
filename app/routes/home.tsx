@@ -1,17 +1,17 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { HomePage } from '~/components/home-page'
 
-export function meta({}: Route.MetaArgs) {
+export function meta(): Route.MetaDescriptors {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: 'Brian Cilenti | Home' },
+    {
+      name: 'description',
+      content:
+        "Brian Cilenti - Senior Frontend Developer | Creating user-friendly experiences with AI and community insight. Systematic problem-solver with a passion for optimization and collaboration. Let's connect and build something great!",
+    },
   ];
 }
 
-export function loader({ context }: Route.LoaderArgs) {
-  return { message: "Hello from Vercel" };
-}
-
-export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
+export default function Home() {
+  return <HomePage />
 }
