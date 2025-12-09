@@ -1,26 +1,34 @@
-import { useNavigate } from 'react-router'
-import React from 'react'
+import { useNavigate } from "react-router";
+import React from "react";
 
 export const PortfolioProjectCard: React.FC<{
-  title: string
-  imageSrc: string
-  githubUrl: string
-  description: string
-  deployedUrl: string
-  demoUrl: string
-  detailViewLink: string
-}> = ({ title, imageSrc, githubUrl, description, deployedUrl, demoUrl, detailViewLink }) => {
-  const navigate = useNavigate()
+  title: string;
+  imageSrc: string;
+  githubUrl: string;
+  description: string;
+  deployedUrl: string;
+  demoUrl: string;
+  detailViewLink: string;
+}> = ({
+  title,
+  imageSrc,
+  githubUrl,
+  description,
+  deployedUrl,
+  demoUrl,
+  detailViewLink,
+}) => {
+  const navigate = useNavigate();
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      navigate(detailViewLink)
+    if (event.key === "Enter" || event.key === " ") {
+      navigate(detailViewLink);
     }
-  }
+  };
 
   const stopPropagation = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.stopPropagation()
-  }
+    event.stopPropagation();
+  };
 
   return (
     <div
@@ -75,5 +83,5 @@ export const PortfolioProjectCard: React.FC<{
         )}
       </div>
     </div>
-  )
-}
+  );
+};

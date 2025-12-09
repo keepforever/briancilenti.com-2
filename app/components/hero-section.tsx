@@ -1,5 +1,5 @@
-import { MapPin as LocateIcon } from 'lucide-react'
-import { config } from '~/constants/config'
+import { MapPin as LocateIcon } from "lucide-react";
+import { config } from "~/constants/config";
 
 export function HeroSection() {
   return (
@@ -7,11 +7,17 @@ export function HeroSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center lg:flex-row lg:gap-8">
           <div className="mb-4 lg:mb-0 lg:mr-8">
-            <img alt="Profile" className="h-48 w-48 rounded-full object-cover object-center" src="/brian-one.png" />
+            <img
+              alt="Profile"
+              className="h-48 w-48 rounded-full object-cover object-center"
+              src="/brian-one.png"
+            />
           </div>
           <div className="space-y-4 text-center lg:text-left">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">{config.name}</h1>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+                {config.name}
+              </h1>
               <p className="text-xl">{config.title}</p>
             </div>
 
@@ -29,5 +35,5 @@ export function HeroSection() {
         </div>
       </div>
     </div>
-  )
+  );
 }

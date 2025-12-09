@@ -1,20 +1,22 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import { useState } from 'react'
-import { Link, NavLink } from 'react-router'
-import { Dialog } from '@headlessui/react'
-import { Menu, X } from 'lucide-react'
-import { cn } from '~/utils/misc'
-import { GitHubIcon } from './socials'
-import { LinkedInIcon } from './icons/linkedin-icon'
-import { contactInfoObject } from '~/constants/contactInfo'
-import { navigation } from '~/constants/config'
+import { useState } from "react";
+import { Link, NavLink } from "react-router";
+import { Dialog } from "@headlessui/react";
+import { Menu, X } from "lucide-react";
+import { cn } from "~/utils/misc";
+import { GitHubIcon } from "./socials";
+import { LinkedInIcon } from "./icons/linkedin-icon";
+import { contactInfoObject } from "~/constants/contactInfo";
+import { navigation } from "~/constants/config";
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-black bg-opacity-85 shadow-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
+      <nav
+        className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8"
+        aria-label="Global"
+      >
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
@@ -34,14 +36,17 @@ export function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map(item => (
+          {navigation.map((item) => (
             <NavLink
               key={item.name}
               to={item.href}
               className={({ isActive }) => {
-                return cn('text-sm font-semibold leading-6 text-green-400 hover:text-green-500', {
-                  'text-green-300 underline': isActive,
-                })
+                return cn(
+                  "text-sm font-semibold leading-6 text-green-400 hover:text-green-500",
+                  {
+                    "text-green-300 underline": isActive,
+                  },
+                );
               }}
             >
               {item.name}
@@ -49,22 +54,38 @@ export function Header() {
           ))}
         </div>
         <div className="hidden gap-2 lg:flex lg:flex-1 lg:justify-end">
-          <a href={contactInfoObject.github.href} target="_blank" rel="noreferrer">
+          <a
+            href={contactInfoObject.github.href}
+            target="_blank"
+            rel="noreferrer"
+          >
             <GitHubIcon className="h-6 w-6 text-green-300 hover:text-green-500" />
           </a>
 
-          <a href={contactInfoObject.linkedin.href} target="_blank" rel="noreferrer">
+          <a
+            href={contactInfoObject.linkedin.href}
+            target="_blank"
+            rel="noreferrer"
+          >
             <LinkedInIcon className="h-6 w-6 text-green-300 hover:text-green-500" />
           </a>
         </div>
       </nav>
 
       {/* Mobile Nav */}
-      <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog
+        className="lg:hidden"
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
         <div className="fixed inset-0 z-10 bg-black bg-opacity-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-700">
           <div className="flex items-center justify-between pt-12">
-            <Link to="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              to="/"
+              className="-m-1.5 p-1.5"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               <h3 className="font-bold tracking-tight text-green-400 hover:text-green-600 hover:underline">
                 BrianCilenti.com
               </h3>
@@ -81,15 +102,15 @@ export function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-700">
               <div className="space-y-2 py-6">
-                {navigation.map(item => (
+                {navigation.map((item) => (
                   <NavLink
                     key={item.name}
                     to={item.href}
                     className={({ isActive }) => {
                       return cn(
-                        '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-green-500 hover:bg-gray-800 hover:text-green-300',
+                        "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-green-500 hover:bg-gray-800 hover:text-green-300",
                         { underline: isActive },
-                      )
+                      );
                     }}
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -102,5 +123,5 @@ export function Header() {
         </Dialog.Panel>
       </Dialog>
     </header>
-  )
+  );
 }

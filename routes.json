@@ -1,0 +1,51 @@
+[
+  {
+    "id": "root",
+    "path": "",
+    "file": "root.tsx",
+    "children": [
+      {
+        "id": "routes/home",
+        "index": true,
+        "file": "routes/home.tsx"
+      },
+      {
+        "id": "routes/projects",
+        "path": "projects",
+        "file": "routes/projects.tsx"
+      },
+      {
+        "id": "routes/project-details",
+        "path": "projects/:projectId",
+        "file": "routes/project-details.tsx"
+      },
+      {
+        "id": "routes/resume",
+        "path": "resume",
+        "file": "routes/resume.tsx"
+      },
+      {
+        "id": "routes/demo",
+        "path": "demo",
+        "file": "routes/demo.tsx",
+        "children": [
+          {
+            "id": "routes/demo-index",
+            "index": true,
+            "file": "routes/demo-index.tsx"
+          },
+          {
+            "id": "routes/video-clip-demo",
+            "path": "video-clip-demo",
+            "file": "routes/video-clip-demo.tsx"
+          }
+        ]
+      },
+      {
+        "id": "routes/hidden",
+        "path": "you-will-not-find-this",
+        "file": "routes/hidden.tsx"
+      }
+    ]
+  }
+]

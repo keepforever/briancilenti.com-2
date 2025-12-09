@@ -1,4 +1,4 @@
-import { Header } from './header'
+import { Header } from "./header";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -14,5 +14,5 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <footer>FOoter</footer>
       </div>
     </>
-  )
+  );
 }

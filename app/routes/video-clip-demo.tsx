@@ -1,5 +1,4 @@
-import type { Route } from "./+types/video-clip-demo";
-import { ClipEditor } from '~/components/clip-editor'
+import { ClipEditor } from "~/components/clip-editor";
 
 export default function VideoClipDemo() {
   return (
@@ -10,5 +9,5 @@ export default function VideoClipDemo() {
 
       <ClipEditor />
     </div>
-  )
+  );
 }

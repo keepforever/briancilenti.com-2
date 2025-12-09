@@ -1,5 +1,5 @@
-import { config } from '~/constants/config'
-import { educationConfig } from './education-card'
+import { config } from "~/constants/config";
+import { educationConfig } from "./education-card";
 
 export function ResumeHeroSection() {
   return (
@@ -7,11 +7,17 @@ export function ResumeHeroSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center lg:flex-row lg:gap-8">
           <div className="mb-4 lg:mb-0 lg:mr-8">
-            <img alt="Profile" className="h-48 w-48 rounded-full object-cover object-center" src="/brian-one.png" />
+            <img
+              alt="Profile"
+              className="h-48 w-48 rounded-full object-cover object-center"
+              src="/brian-one.png"
+            />
           </div>
           <div className="space-y-4 text-center lg:text-left">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">{config.name}</h1>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+                {config.name}
+              </h1>
             </div>
 
             {/* <div className="space-y-2">
@@ -27,7 +33,8 @@ export function ResumeHeroSection() {
 
             <div className="space-y-2">
               <p className="font-semibold text-green-300">
-                {educationConfig.university} <small>({educationConfig.graduationYear})</small>
+                {educationConfig.university}{" "}
+                <small>({educationConfig.graduationYear})</small>
               </p>
               <p className="text-green-100">{educationConfig.degree}</p>
               <p className="text-green-100">GPA: {educationConfig.gpa}</p>
@@ -36,5 +43,5 @@ export function ResumeHeroSection() {
         </div>
       </div>
     </div>
-  )
+  );
 }

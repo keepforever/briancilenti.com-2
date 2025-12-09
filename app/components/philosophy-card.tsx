@@ -1,34 +1,40 @@
-import { Link } from 'react-router'
-import React from 'react'
+import { Link } from "react-router";
+import React from "react";
 
-export const PhilosophyCard: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
+export const PhilosophyCard: React.FC<{
+  title: string;
+  children: React.ReactNode;
+}> = ({ title, children }) => (
   <div className="rounded-lg bg-gray-800 p-6 shadow-md">
     <h2 className="text-2xl font-bold text-green-400">{title}</h2>
     <div className="mt-4 text-green-200">{children}</div>
   </div>
-)
+);
 
-const ExperienceListItem: React.FC<{ company: string; description: string; duration: string }> = ({
-  company,
-  description,
-  duration,
-}) => (
+const ExperienceListItem: React.FC<{
+  company: string;
+  description: string;
+  duration: string;
+}> = ({ company, description, duration }) => (
   <li className="mb-4">
-    <strong className="text-green-300">{company}</strong> <span className="text-xs text-green-200">({duration})</span>
+    <strong className="text-green-300">{company}</strong>{" "}
+    <span className="text-xs text-green-200">({duration})</span>
     <p className="mt-2 text-green-100">{description}</p>
   </li>
-)
+);
 
 export const cardConfig = [
   {
-    title: 'About Me',
+    title: "About Me",
     content: (
       <p>
-        I'm a frontend developer with an enthusiasm for DX, velocity, and cutting-edge tools like GitHub Copilot and
-        ChatGPT. My mechanical engineering background drives my systematic approach to problem-solving and optimization.
+        I'm a frontend developer with an enthusiasm for DX, velocity, and
+        cutting-edge tools like GitHub Copilot and ChatGPT. My mechanical
+        engineering background drives my systematic approach to problem-solving
+        and optimization.
         <br />
-        <br />I consider myself a skilled communicator; As such, I prioritize clear, concise messaging and leverage
-        tools like{' '}
+        <br />I consider myself a skilled communicator; As such, I prioritize
+        clear, concise messaging and leverage tools like{" "}
         <a
           href="https://www.loom.com/"
           className="font-mono text-green-400 hover:text-green-600"
@@ -36,27 +42,31 @@ export const cardConfig = [
           rel="noopener noreferrer"
         >
           Loom
-        </a>{' '}
-        to send dense information efficiently, minimizing noise, maximizing impact, and saving time.
+        </a>{" "}
+        to send dense information efficiently, minimizing noise, maximizing
+        impact, and saving time.
       </p>
     ),
   },
   {
-    title: 'Philosophy',
+    title: "Philosophy",
     content: (
       <p>
-        I treat users of apps I work on as guests, aiming to provide efficient workflows that respect their time and
-        effort. I value pragmatic solutions that balance velocity and quality, and adhere to a "strong opinions, loosely
-        held" mindset.
+        I treat users of apps I work on as guests, aiming to provide efficient
+        workflows that respect their time and effort. I value pragmatic
+        solutions that balance velocity and quality, and adhere to a "strong
+        opinions, loosely held" mindset.
       </p>
     ),
   },
   {
-    title: 'Community & Collaboration',
+    title: "Community & Collaboration",
     content: (
       <p>
-        Staying current with modern practices and trends is crucial in web development. I actively follow React
-        community thought leaders on platforms like X.com, which keeps my work aligned with the latest advancements.
+        Staying current with modern practices and trends is crucial in web
+        development. I actively follow React community thought leaders on
+        platforms like X.com, which keeps my work aligned with the latest
+        advancements.
       </p>
     ),
   },
@@ -64,15 +74,24 @@ export const cardConfig = [
     title: "Let's Connect",
     content: (
       <>
-        <p>Looking for a seasoned developer or a consultant? Reach out to discuss collaboration.</p>
+        <p>
+          Looking for a seasoned developer or a consultant? Reach out to discuss
+          collaboration.
+        </p>
         <br />
         <p>The best way to reach me is via a DM on LinkedIn.</p>
         <p className="mt-4">
-          <a href="https://www.linkedin.com/in/brian-cilenti-65754749" className="text-green-400 hover:text-green-600">
+          <a
+            href="https://www.linkedin.com/in/brian-cilenti-65754749"
+            className="text-green-400 hover:text-green-600"
+          >
             LinkedIn
-          </a>{' '}
-          |{' '}
-          <a href="https://github.com/keepforever" className="text-green-400 hover:text-green-600">
+          </a>{" "}
+          |{" "}
+          <a
+            href="https://github.com/keepforever"
+            className="text-green-400 hover:text-green-600"
+          >
             GitHub
           </a>
         </p>
@@ -80,7 +99,7 @@ export const cardConfig = [
     ),
   },
   {
-    title: 'Experience Highlights',
+    title: "Experience Highlights",
     content: (
       <>
         <ul>
@@ -106,4 +125,4 @@ export const cardConfig = [
       </>
     ),
   },
-]
+];

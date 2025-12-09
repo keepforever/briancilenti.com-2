@@ -1,5 +1,5 @@
-import { HeroSection } from './hero-section'
-import { ContentSection } from './content-section'
+import { HeroSection } from "./hero-section";
+import { ContentSection } from "./content-section";
 
 export function HomePage() {
   return (
@@ -8,5 +8,5 @@ export function HomePage() {
 
       <ContentSection />
     </div>
-  )
+  );
 }
