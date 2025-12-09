@@ -40,11 +40,6 @@
             "file": "routes/video-clip-demo.tsx"
           }
         ]
-      },
-      {
-        "id": "routes/hidden",
-        "path": "you-will-not-find-this",
-        "file": "routes/hidden.tsx"
       }
     ]
   }
