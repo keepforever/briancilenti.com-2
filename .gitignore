@@ -37,3 +37,4 @@ app/llm-instructions/types.ts
 
 charts/*/charts/
 .pre-commit-trivy-cache/
+references/
